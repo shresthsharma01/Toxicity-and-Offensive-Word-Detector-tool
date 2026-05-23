@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toxic Word Detective</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🕵️‍♂️ Toxic Word Detective</h1>
+        <p class="subtitle">Scan your text for offensive, toxic words, and harmful phrases. Highlights detected issues for easy review. Client-side only—no data leaves your browser.</p>
+        
+        <textarea id="inputText" placeholder="Type your text here... e.g., 'You don't deserve to live in the world.' This should now flag as toxic!"></textarea>
+        
+        <div class="button-group">
+            <button onclick="detectWords()">🔍 Detect & Highlight</button>
+            <button id="clearBtn" onclick="clearText()">🗑️ Clear</button>
+        </div>
+        
+        <div id="output"></div>
+    </div>
+    
+    <div id="disclaimer">
+        <strong>Disclaimer:</strong> This tool uses an expanded list of words and phrases for basic toxicity detection. It matches whole words/phrases case-insensitively but ignores context (e.g., sarcasm). Not perfect—use professional tools like Perspective API for advanced moderation. For educational/demo purposes only.
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
